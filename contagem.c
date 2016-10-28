@@ -6,7 +6,7 @@ int main()
  printf("\nInicio da contagem \n");
  for(cont=0; cont<=50; cont++)
  {
-     printf("%d, ", cont); 
+     printf("%d -  ", cont); 
  
  }
  
