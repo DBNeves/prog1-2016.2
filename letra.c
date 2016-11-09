@@ -12,11 +12,15 @@ int main()
     printf("\nEssa letra e maiuscula. \n");
   }
   
-  else
+  else if((letra>=97) && (letra<=122))
   {
     printf("\nEssa letra e minuscula. \n");
   }
-   
+  
+  else if((letra>=48)&&(letra<=57))
+  {
+    printf("\nIsso e um numero \n");
+  }
  
    return 0;
 }
