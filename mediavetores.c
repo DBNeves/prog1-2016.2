@@ -15,6 +15,17 @@ int main()
    media=soma/10;
   printf("\nA media da turma = %f" ,  media);
   
+  printf("\nAlunos com nota>= media");
+  
+  for(aluno=0;aluno<=9;aluno++)
+  {
+    if(av1[aluno]>= media)
+    {
+      pritnf("\nAluno %d -> Nota = %f", aluno+1,notas[aluno]);
+    
+    }  
+  
+  }
   
   
   
