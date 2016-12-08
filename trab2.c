@@ -1,44 +1,42 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
-	float matA[2][3];
-	float matB[3][2];
-	float matR[2][2];
-	int i,j;
+int main() 
 
-	printf("\nEntre com os termos da matriz A");
-	printf("\n-------------------------------------------------");
-	
-for(i=0;i<2;i++)
 {
-	for(j=0;j<3;j++)
-	{
-	printf("\nEntre com o termo (%d,%d):",i,j );
-	scanf("%d", matA[i][j]);	
-	}
+  int i, j, m; 
+  int matA[2][3], matB[3][2], matR[2][2];
+    
+  
+    printf("\nMatriz A\n.........................................\n\n");
+    for (i=0; i<2; i++) {
+      for(j=0; j<3; j++) {
+        printf("Entre com o elemento (%d,%d): ", (i+1), (j+1));
+        scanf("%d", &matA[i][j]);
+      }
+    }
+    printf("\nMatriz B\n..................................\n\n");
+    for (i=0; i<3; i++) {
+      for (j=0; j<2; j++) {
+        printf("Entre com o elemento (%d,%d): ", (i+1), (j+1));
+        scanf("%d", &matB[i][j]); 
+      }
+    }
+    for (i=0;i<2; i++) {
+      for (j=0; j<2; j++) {
+        for (m=0; m<3; m++) {
+          matR[i][j] = matR[i][j] + (matA[i][m] * matB[m][j]); 
+ 
+        }
+      }
+    }
+    printf("\nMatriz Resultante\n..................................\n\n");
+    for (i=0; i<2; i++) {
+      for (j=0; j<2; j++) {
+        printf("%d ", matR[i][j]);
+      }
+      printf("\n");
+    }
+  printf("\n");
+  return(0);  
 }
 
-		printf("\nEntre com os termos da matriz B");
-	printf("\n-------------------------------------------------");
-	
-for(i=0;i<3;i++)
-{
-	for(j=0;j<2;j++)
-	{
-	printf("\nEntre com o termo (%d,%d):",i,j );
-	scanf("%d", matB[i][j]);	
-	}
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	system("pause");
-	return 0;
-}
